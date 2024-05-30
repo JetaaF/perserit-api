@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" id="para" alt="">
+    <button id="buto" onclick="la()">click</button>
+    <script>
+        function la(){
+            let mg = document.getElementById("para")
+            let fil ="https://dog.ceo/api/breeds/image/random"
+            fetch(fil)
+            .then(x=>x.json())
+            .then(k=>{
+                mg.src=k.message;
+            })
+            
+        }la()
+    </script>
+</body>
+</html>
